@@ -264,9 +264,30 @@ table.spec { width: 100%; border-collapse: collapse; font-variant-numeric: tabul
 table.spec th, table.spec td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--card-border); vertical-align: top; }
 table.spec tr:last-child th, table.spec tr:last-child td { border-bottom: 0; }
 table.spec th { color: var(--fg-muted); font-weight: 500; width: 52%; }
+table.spec-3 { table-layout: fixed; }
+table.spec-3 th, table.spec-3 td { width: 36%; }
+table.spec-3 th[scope="row"], table.spec-3 thead th:first-child { width: 28%; }
+table.spec-opts th[scope="row"] { width: 36%; color: var(--fg); font-weight: 700; }
+table.spec thead th { color: var(--fg); font-weight: 700; font-size: 0.95rem; }
+
+/* Lights 2 vs Pro */
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 760px) { .compare { grid-template-columns: 1fr; } }
+.compare-card { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); padding: var(--space-4); }
+.theme-light .compare-card, .theme-cream .compare-card { box-shadow: var(--shadow); }
+.compare-card.pro { border-color: rgba(255, 194, 77, 0.6); box-shadow: 0 0 0 1px rgba(255, 194, 77, 0.3), 0 18px 50px rgba(255, 194, 77, 0.10); }
+.compare-card h3 { font-size: 1.5rem; margin-bottom: var(--space-1); }
+.compare-card ul.checks { margin: var(--space-2) 0 0; }
+.compare-card ul.checks li { color: var(--fg-muted); }
+.cut-tag { display: inline-flex; align-items: center; padding: 7px 12px; border-radius: 999px; font: 800 0.76rem/1 var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: var(--space-2); }
+.cut-tag.no { background: rgba(248, 113, 113, 0.16); color: #FCA5A5; }
+.theme-light .cut-tag.no, .theme-cream .cut-tag.no { background: #FEE4E2; color: #B42318; }
+.cut-tag.yes { background: var(--gold); color: var(--ink); }
+@media (max-width: 480px) { table.spec-3 th, table.spec-3 td { padding: 12px 10px; font-size: 0.9rem; } }
 
 /* Length planner */
 .calc { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); padding: var(--space-3); margin-block: var(--space-3); box-shadow: var(--shadow); }
+.calc-model { margin-bottom: var(--space-3); padding-bottom: var(--space-3); border-bottom: 1px solid var(--card-border); }
 .runs { display: grid; gap: var(--space-1); margin-bottom: var(--space-2); }
 .run { display: grid; grid-template-columns: 1fr 128px 44px; gap: var(--space-1); align-items: center; }
 .run-head { color: var(--fg-muted); font-size: 0.9rem; }
