@@ -250,18 +250,13 @@ ul.checks svg { width: 22px; height: 22px; color: var(--gold); margin-top: 3px; 
 .fact strong { display: block; font: 700 1.5rem/1.2 var(--font-head); color: var(--fg); font-variant-numeric: tabular-nums; }
 .fact span { color: var(--fg-muted); font-size: 0.95rem; }
 
-/* House demo (always dark, whatever section it sits in) */
-.demo { margin: 0; background: var(--navy); border: 1px solid rgba(255, 255, 255, 0.10); border-radius: var(--radius); padding: var(--space-2); box-shadow: 0 24px 60px rgba(8, 17, 31, 0.25); }
-.demo svg.scene { width: 100%; height: auto; border-radius: 14px; }
-.controls { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: var(--space-2); align-items: center; }
-.controls .label { color: var(--fg-muted); font-size: 0.9rem; margin-right: 4px; }
-.chip { min-height: 44px; padding: 0 14px; border-radius: 999px; background: var(--navy-2); color: #FFFFFF; border: 1px solid rgba(255, 255, 255, 0.14); font: 500 0.95rem/1 var(--font-body); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: border-color 200ms var(--ease), background-color 200ms var(--ease); }
-.chip:hover { border-color: rgba(255, 255, 255, 0.4); }
-.chip[aria-pressed="true"] { border-color: var(--gold); background: rgba(255, 194, 77, 0.14); }
-.swatch { width: 14px; height: 14px; border-radius: 50%; flex: none; }
-.demo-caption { color: var(--fg-muted); font-size: 0.85rem; margin: var(--space-1) 4px 0; }
-.sky, .siding, .roof, .win, .bulb { transition: fill 400ms var(--ease), opacity 400ms var(--ease); }
-.stars { transition: opacity 400ms var(--ease); }
+/* Colour trio: the same kind of install in three colours, real job photos */
+.scene-shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.scene-shots figure { margin: 0; position: relative; aspect-ratio: 3 / 5; border-radius: var(--radius); overflow: hidden; background: var(--ink); box-shadow: 0 24px 60px rgba(8, 17, 31, 0.22); }
+.scene-shots img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.scene-shots figcaption { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 8px; padding: 44px 14px 14px; background: linear-gradient(0deg, rgba(5, 12, 24, 0.92), transparent); color: #FFFFFF; font-weight: 700; font-size: 0.95rem; line-height: 1.2; }
+.swatch { width: 14px; height: 14px; border-radius: 50%; flex: none; box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85); }
+@media (max-width: 480px) { .scene-shots { gap: 8px; } .scene-shots figcaption { padding: 36px 10px 10px; font-size: 0.82rem; gap: 6px; } }
 
 /* Spec table */
 .table-wrap { overflow-x: auto; margin-block: var(--space-3); border: 1px solid var(--card-border); border-radius: var(--radius-sm); background: var(--card); }
