@@ -20,11 +20,12 @@
   font-display: swap;
   src: url("/assets/fonts/source-serif-4-700-latin.woff2") format("woff2");
 }
+/* Dark shades lifted about two steps lighter (client via Kirill, 2026-10-29: "the dark is a little bit too dark"). Was ink #08111F. */
 :root {
-  --ink: #08111F;
-  --ink-2: #050C18;
-  --navy: #0D1B2E;
-  --navy-2: #12243B;
+  --ink: #0F213B;
+  --ink-2: #0B1B36;
+  --navy: #152B4A;
+  --navy-2: #1A3556;
   --paper: #FFFDF8;
   --cream: #F6F1E7;
   --gold: #FFC24D;
@@ -44,10 +45,10 @@
 body, .theme-dark {
   --fg: #F8FAFC;
   --fg-muted: #A9B6CB;
-  --card: #0F1F35;
+  --card: #172F51;
   --card-border: rgba(255, 255, 255, 0.10);
-  --field: #132842;
-  --field-border: rgba(255, 255, 255, 0.28);
+  --field: #1B395E;
+  --field-border: rgba(255, 255, 255, 0.38);
   --eyebrow: var(--gold);
   --link: var(--gold);
   --ghost-border: rgba(255, 255, 255, 0.40);
@@ -113,7 +114,7 @@ section { padding-block: var(--space-12); }
 .topbar a:hover { text-decoration: underline; }
 @media (max-width: 640px) { .topbar .wrap { justify-content: center; } .topbar span { display: none; } }
 
-header.site { position: sticky; top: 0; z-index: 40; background: rgba(13, 27, 46, 0.96); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+header.site { position: sticky; top: 0; z-index: 40; background: rgba(21, 43, 74, 0.96); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
 .bar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); min-height: 76px; }
 .brand { font: 700 1.2rem/1.1 var(--font-head); letter-spacing: -0.01em; color: #FFFFFF; text-decoration: none; display: flex; align-items: center; gap: 10px; }
 .brand svg { width: 30px; height: 30px; flex: none; }
@@ -165,7 +166,7 @@ nav.primary .sub a:hover { background: rgba(255, 255, 255, 0.06); }
 /* Hero */
 .hero { position: relative; overflow: hidden; padding-block: var(--space-12) var(--space-8); }
 .hero-glow { position: absolute; inset: -40px; width: calc(100% + 80px); height: calc(100% + 80px); object-fit: cover; filter: blur(28px) saturate(1.3); opacity: 0.32; }
-.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8, 17, 31, 0.97) 0%, rgba(8, 17, 31, 0.80) 50%, rgba(8, 17, 31, 0.45) 100%), linear-gradient(0deg, rgba(8, 17, 31, 0.9), transparent 45%); }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15, 33, 59, 0.97) 0%, rgba(15, 33, 59, 0.80) 50%, rgba(15, 33, 59, 0.45) 100%), linear-gradient(0deg, rgba(15, 33, 59, 0.9), transparent 45%); }
 .hero > .wrap { position: relative; z-index: 2; }
 @media (max-width: 640px) { .hero { padding-block: var(--space-6); } }
 .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-6); align-items: center; }
@@ -184,7 +185,7 @@ nav.primary .sub a:hover { background: rgba(255, 255, 255, 0.06); }
 @media (max-width: 960px) { .hero-shots { height: 380px; } }
 @media (max-width: 480px) { .hero-shots { height: 300px; gap: 10px; } }
 
-.proof { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: var(--space-8); background: rgba(13, 27, 46, 0.85); border: 1px solid rgba(255, 255, 255, 0.10); border-radius: var(--radius); overflow: hidden; }
+.proof { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: var(--space-8); background: rgba(21, 43, 74, 0.85); border: 1px solid rgba(255, 255, 255, 0.10); border-radius: var(--radius); overflow: hidden; }
 .proof div { padding: var(--space-3); text-align: center; }
 .proof div + div { border-left: 1px solid rgba(255, 255, 255, 0.10); }
 .proof strong { display: block; font: 700 1.8rem/1.15 var(--font-head); color: #FFFFFF; font-variant-numeric: tabular-nums; }
