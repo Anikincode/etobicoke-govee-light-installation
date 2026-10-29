@@ -264,6 +264,8 @@ ul.checks svg { width: 22px; height: 22px; color: var(--gold); margin-top: 3px; 
 
 /* Colour trio: the same kind of install in three colours, real job photos */
 .scene-shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+/* Full-width rows stay narrow: the job photos are small originals and go soft when stretched. */
+.wrap > .scene-shots { max-width: 780px; }
 .scene-shots figure { margin: 0; position: relative; aspect-ratio: 3 / 5; border-radius: var(--radius); overflow: hidden; background: var(--ink); box-shadow: 0 24px 60px rgba(8, 17, 31, 0.22); }
 .scene-shots img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .scene-shots figcaption { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 8px; padding: 44px 14px 14px; background: linear-gradient(0deg, rgba(5, 12, 24, 0.92), transparent); color: #FFFFFF; font-weight: 700; font-size: 0.95rem; line-height: 1.2; }
