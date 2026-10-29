@@ -388,6 +388,12 @@ ul.foot-links a { display: inline-block; padding: 8px 0; text-decoration: none; 
 ul.foot-links a:hover { color: #FFFFFF; text-decoration: underline; }
 .foot-legal { border-top: 1px solid rgba(255, 255, 255, 0.08); margin-top: var(--space-6); padding-top: var(--space-3); font-size: 0.88rem; }
 
+/* HTML sitemap (/sitemap/) */
+.sitemap h2 { font-size: 1.6rem; margin-top: var(--space-4); }
+.sitemap h2:first-child { margin-top: 0; }
+.sitemap ul { padding-left: 1.2em; margin: var(--space-1) 0 0; }
+.sitemap a { display: inline-block; padding: 10px 0; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0ms !important; animation: none !important; }
