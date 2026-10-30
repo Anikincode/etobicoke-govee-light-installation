@@ -235,11 +235,21 @@ a.svc-tag:hover { background: rgba(255, 194, 77, 0.2); }
 .gallery figure { margin: 0; position: relative; border-radius: var(--radius); overflow: hidden; background: var(--ink); }
 .gallery .tall { grid-row: span 2; }
 .gallery .wide { grid-column: span 2; }
-.gallery img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.gallery figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 48px 18px 16px; background: linear-gradient(0deg, rgba(5, 12, 24, 0.92), transparent); color: #FFFFFF; }
-.gallery figcaption strong { display: block; font: 700 1.15rem/1.2 var(--font-head); }
-.gallery figcaption span { font-size: 0.85rem; color: #D7DEE8; }
+.gallery img, .pair img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.gallery figcaption, .pair figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 48px 18px 16px; background: linear-gradient(0deg, rgba(5, 12, 24, 0.92), transparent); color: #FFFFFF; }
+.gallery figcaption strong, .pair figcaption strong { display: block; font: 700 1.15rem/1.2 var(--font-head); }
+.gallery figcaption span, .pair figcaption span { font-size: 0.85rem; color: #D7DEE8; }
 @media (max-width: 760px) { .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 190px; gap: 10px; } }
+
+/* Before and after: two landscape job photos side by side, captioned like the gallery */
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.pair figure { margin: 0; position: relative; aspect-ratio: 5 / 3; border-radius: var(--radius); overflow: hidden; background: var(--ink); }
+@media (max-width: 760px) { .pair { grid-template-columns: 1fr; gap: 10px; } }
+
+/* One job photo under a section's text. Kept short so a sticky split column still fits the screen. */
+.job-photo { margin: var(--space-4) 0 0; }
+.job-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 25%; border-radius: var(--radius); }
+.job-photo figcaption { margin-top: var(--space-1); font-size: 0.9rem; color: var(--fg-muted); }
 
 /* Generic cards */
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
