@@ -223,6 +223,13 @@ nav.primary .sub a:hover, nav.primary .sub a[aria-current="page"] { background: 
 .icon { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: rgba(232, 50, 47, 0.14); color: var(--red2); margin-bottom: 18px; }
 .card:nth-child(2) .icon, .card:nth-child(4) .icon { background: rgba(59, 181, 74, 0.14); color: var(--green); }
 .icon svg { width: 22px; height: 22px; }
+
+/* Review quotes. Text only: no stars, rating or review schema (the reviews are on another business's profile). */
+.quote { margin: 0; background: var(--panel2); display: flex; flex-direction: column; gap: 18px; }
+.quote blockquote { margin: 0; flex: 1; }
+.quote blockquote p { color: var(--text); }
+.quote figcaption strong { display: block; font-weight: 600; }
+.quote figcaption span { display: block; margin-top: 4px; font-size: 0.82rem; line-height: 1.45; color: var(--muted); }
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
