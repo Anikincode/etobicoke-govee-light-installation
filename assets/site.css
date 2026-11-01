@@ -229,7 +229,6 @@ nav.primary .sub a:hover, nav.primary .sub a[aria-current="page"] { background: 
 .quote blockquote { margin: 0; flex: 1; }
 .quote blockquote p { color: var(--text); }
 .quote figcaption strong { display: block; font-weight: 600; }
-.quote figcaption span { display: block; margin-top: 4px; font-size: 0.82rem; line-height: 1.45; color: var(--muted); }
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
