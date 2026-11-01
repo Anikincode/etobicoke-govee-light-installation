@@ -1,4 +1,4 @@
-// etobicokelights.com — mobile menu and the length planner (length guide page).
+// etobicokelights.com — mobile menu, the home hero cross-fade and colour tabs, and the length planner (length guide page).
 (() => {
   // ---- Mobile menu ----
   const menuBtn = document.querySelector(".menu-btn");
@@ -13,6 +13,32 @@
     document.addEventListener("keydown", e => {
       if (e.key === "Escape" && nav.classList.contains("open")) { setOpen(false); menuBtn.focus(); }
     });
+  }
+
+  // ---- Home hero: cross-fade the night photos every 4.5 s, with their labels. Not with reduced motion. ----
+  const slides = document.querySelectorAll(".hero-slides picture");
+  const labels = document.querySelectorAll(".hero-labels span");
+  if (slides.length > 1 && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    let i = 0;
+    setInterval(() => {
+      slides[i].classList.remove("on");
+      if (labels[i]) labels[i].classList.remove("on");
+      i = (i + 1) % slides.length;
+      slides[i].classList.add("on");
+      if (labels[i]) labels[i].classList.add("on");
+    }, 4500);
+  }
+
+  // ---- Colour tabs (home): the pressed tab brings its photo forward; on phones only that photo shows. ----
+  const stage = document.querySelector(".mode-stage");
+  if (stage) {
+    const tabs = document.querySelectorAll(".mode-tabs button");
+    const figs = stage.querySelectorAll("figure");
+    stage.classList.add("ready");
+    tabs.forEach(t => t.addEventListener("click", () => {
+      tabs.forEach(x => x.setAttribute("aria-pressed", String(x === t)));
+      figs.forEach(f => f.classList.toggle("on", f.dataset.mode === t.dataset.mode));
+    }));
   }
 
   // ---- Length planner ----
