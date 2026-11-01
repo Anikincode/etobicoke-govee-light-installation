@@ -194,7 +194,7 @@ nav.primary .sub a:hover, nav.primary .sub a[aria-current="page"] { background: 
 @media (max-width: 560px) { .mode-tabs button { padding: 8px 14px; font-size: 0.85rem; } }
 /* The colour photos are small originals, so the stage frames them side by side at about their own size. The pressed tab
    brings its photo forward. */
-.mode-stage { display: grid; grid-template-columns: repeat(3, minmax(0, 250px)); justify-content: center; gap: 18px; padding: 34px; border-radius: var(--radius); background: var(--stage); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5); }
+.mode-stage { display: grid; grid-template-columns: repeat(5, minmax(0, 200px)); justify-content: center; gap: 18px; padding: 34px; border-radius: var(--radius); background: var(--stage); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5); }
 .mode-stage figure { margin: 0; position: relative; aspect-ratio: 3 / 5; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); opacity: 0.38; transform: scale(0.97); transition: opacity 0.6s, transform 0.6s; }
 .mode-stage figure.on { opacity: 1; transform: none; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45); }
 /* Until site.js marks the stage ready (or without JS), all three photos show at full strength. */
